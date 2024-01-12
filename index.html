@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>s.mani | CORS</title>
+    <style>
+      th,
+      td {
+        text-align: left;
+        padding: 10px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: rgb(168, 167, 167);
+      }
+      tbody tr:nth-child(odd) {
+        background-color: white;
+      }
+
+      thead {
+        background-color: #8a2be2;
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="./same-origin.css" />
+  </head>
+  <body>
+    <h1>s.mani | CORS Demonstration</h1>
+    <h2>Test Cases</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Test Case No.</th>
+          <th>Request Source</th>
+          <th>Resource Type</th>
+          <th>HTTP Method</th>
+          <th>Origin ?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>During parsing of index.html</td>
+          <td>CSS / JS / Images</td>
+          <td>GET</td>
+          <td>same-origin</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>During parsing of index.html</td>
+          <td>CSS / JS / Images</td>
+          <td>GET</td>
+          <td>cross-origin</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>CSS imported internally in another CSS File</td>
+          <td>CSS</td>
+          <td>GET</td>
+          <td>same-origin</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>CSS imported internally in another CSS File</td>
+          <td>CSS</td>
+          <td>GET</td>
+          <td>cross-origin</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>JS making a fetch call to get an asset</td>
+          <td>CSS / JS / Image</td>
+          <td>GET</td>
+          <td>same-origin</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>JS making a fetch call to get an asset</td>
+          <td>CSS / JS / Image</td>
+          <td>GET</td>
+          <td>cross-origin</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>JS making a fetch call to submit the data</td>
+          <td>Serialised Data (e.g. JSON)</td>
+          <td>POST</td>
+          <td>cross-origin</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Image fetch from same Origin</h2>
+    <div style="width: 50%">
+      <img style="width: 100%" src="./same-origin.jpg" />
+    </div>
+    <script type="text/javascript" src="./same-origin.js"></script>
+  </body>
+</html>
