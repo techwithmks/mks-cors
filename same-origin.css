@@ -1,0 +1,5 @@
+@import url("./css-in-css-same-origin.css");
+
+* {
+  box-sizing: border-box;
+}
